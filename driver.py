@@ -54,10 +54,6 @@ def main():
       assignments[grader] = (problem, partition)
 
   ### print summary of assignments ###
-  print "Graders Per Problem"
-  pprint({prob: len(filter(lambda g: prob == assignments[g][0], assignments))\
-    for prob in problems})
-
   print "Grader Assignments"
   pprint({grader: (problem, len(students))\
     for (grader, (problem, students)) in assignments.iteritems()})
@@ -84,7 +80,6 @@ def main():
       for student in students:
         quoted_problem_str = '"%s"' % (problem, )
         writer.writerow([quoted_problem_str, student, None, None])
-  print "\nAssignments Generated."
 
 if __name__ == '__main__':
   main()
