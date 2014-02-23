@@ -75,7 +75,7 @@ def main():
     assert len(set(students_for_problem)) == len(students_for_problem),\
       "students were redundantly assigned for problem %s" % (problem, )
 
-  ### create script ###
+  ### create csv files ###
   for (grader, (problem, students)) in assignments.iteritems():
     file_name = "%s.csv" % (grader, )
     with open(file_name, 'wb') as csvfile:
