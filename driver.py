@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import csv, random
+import csv, json, random
 from pprint import pprint
 from collections import defaultdict
 
@@ -54,9 +54,15 @@ def main():
       assignments[grader] = (problem, partition)
 
   ### print summary of assignments ###
-  print "Grader Assignments"
-  pprint({grader: (problem, len(students))\
-    for (grader, (problem, students)) in assignments.iteritems()})
+  def to_json(grader):
+    problem, student_partition = assignments[grader]
+    return {
+      "grader": grader,
+      "problem": problem,
+      "numStudents": len(student_partition)
+    }
+  output = map(to_json, assignments.keys())
+  print json.dumps(output, sort_keys=True, indent=2, separators=(',', ': '))
 
   ### verify assignment integrity ###
   assert set(assignments.keys()) == set(graders),\

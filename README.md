@@ -7,7 +7,7 @@
 2. generate `students.txt` with `ls path/to/submissions | sed s#.pdf## > students.txt`
 3. use `graders.txt`, which is ignored for safety here, but ping Joe for it if you need it
 4.  update settings in `driver.py`
-5. `python driver.py > assignments.txt`
+5. `python driver.py > assignments.json`
 
 Details of the assignment can be found in `assignments.txt`.
 
