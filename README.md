@@ -1,5 +1,5 @@
-6.006 Grader Distribution Script
-================================
+6.006 PSET to Grade Distributor
+===============================
 
 ## Instructions
 
