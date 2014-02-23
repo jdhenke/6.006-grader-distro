@@ -9,7 +9,7 @@
 4.  update settings in `driver.py`
 5. `python driver.py > assignments.json`
 
-Details of the assignment can be found in `assignments.txt`.
+Details of the assignment can be found in `assignments.json`.
 
 This will create csv files for each grader, named as `<grader_username>.csv` with the following columns.
 
